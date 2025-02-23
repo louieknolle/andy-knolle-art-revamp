@@ -30,6 +30,24 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
+  - label: "Gallery"
+    name: "gallery"
+    folder: "src/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - {
+          label: "Images",
+          name: "images",
+          widget: "list",
+          fields: [
+            { label: "Image", name: "image", widget: "image" },
+            { label: "Alt Text", name: "alt", widget: "string" },
+            { label: "Caption", name: "caption", widget: "string", required: false }
+          ]
+        } 
   - label: "Settings"
     name: "settings"
     editor:
