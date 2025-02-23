@@ -1,0 +1,23 @@
+---
+title: Galleries
+layout: default
+---
+
+<div class="container max-w-3xl px-6 mt-6">
+    <h1 class="text-5xl font-bold">{{title}}</h1>
+
+    {{ content | safe }}
+
+    <div class="mt-8">
+        {% for gallery in collections.gallery %}
+        <article class="my-8">
+            <h2 class="text-3xl font-bold">
+                <a href="{{ gallery.url }}" class="text-blue-700 hover:text-blue-900">
+                    {{ gallery.data.title }}
+                </a>
+            </h2>
+            <p class="mt-2 text-gray-600">{{ gallery.data.description }}</p>
+        </article>
+        {% endfor %}
+    </div>
+</div> 

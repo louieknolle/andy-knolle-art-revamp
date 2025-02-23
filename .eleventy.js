@@ -55,6 +55,10 @@ module.exports = function (eleventyConfig) {
 
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
+  eleventyConfig.addCollection("gallery", function(collection) {
+    return collection.getFilteredByGlob("./src/gallery/*.md");
+  });
+
   return {
     dir: {
       input: "src",
