@@ -1,8 +1,10 @@
 items:
+  - text: Galleries
+    url: "/gallery/"
   - text: Chromatic Delineations
-    url: "/gallery/sample-gallery/"
+    url: "/gallery/chromatic-delineations/"
   - text: S.A.H.O.
-    url: "#"
+    url: "/gallery/s-a-h-o/"
   - text: Sub-Divisions
     url: "#"
   - text: Failed Constructions

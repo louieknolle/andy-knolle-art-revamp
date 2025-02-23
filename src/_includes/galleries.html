@@ -8,16 +8,24 @@ layout: default
 
     {{ content | safe }}
 
-    <div class="mt-8">
+    <section class="mt-15">
         {% for gallery in collections.gallery %}
-        <article class="my-8">
-            <h2 class="text-3xl font-bold">
-                <a href="{{ gallery.url }}" class="text-blue-700 hover:text-blue-900">
-                    {{ gallery.data.title }}
-                </a>
-            </h2>
-            <p class="mt-2 text-gray-600">{{ gallery.data.description }}</p>
-        </article>
+            <article class="my-8">
+                <h2 class="mb-2 text-3xl font-bold text-gray-900">
+                    <a href="{{ gallery.url | url }}">{{ gallery.data.title }}</a>
+                </h2>
+                {% if gallery.data.description %}
+                    <p class="mb-3 text-lg text-gray-500">
+                        {{ gallery.data.description }}
+                    </p>
+                {% endif %}
+                
+                <p>
+                    <a href="{{ gallery.url | url }}" class="text-lg font-bold text-indigo-500">
+                        View Gallery →
+                    </a>
+                </p>
+            </article>
         {% endfor %}
-    </div>
+    </section>
 </div> 
