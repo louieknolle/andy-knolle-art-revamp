@@ -1,10 +1,9 @@
----
 items:
-  - text: Menu One
+  - text: Chromatic Delineations
     url: "#"
-  - text: Menu Two
+  - text: S.A.H.O.
     url: "#"
-  - text: Menu Three
+  - text: Sub-Divisions
     url: "#"
-  - text: Blog
-    url: "/blog"
+  - text: Failed Constructions
+    url: /blog
